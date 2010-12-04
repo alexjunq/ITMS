@@ -1,0 +1,67 @@
+inmetrics tim management system (ITMS)
+
+-- 
+-- configuration tables
+--
+service_status
++ code
++ description
+
+service_catalog
++ code
++ description
+
+system
++ code
++ name
++ description
++ usage
++ systems (outros sistemas de quem depende)
+
+--
+-- data information 
+--
+
+service_request 
++ service_id
++ service_name
++ area (project, performance, trending)
++ xtts_id
++ status
++ responsible
++ requester
++ description
++ abstract
++ dt_request
++ dt_target
++ dt_start_working
++ dt_closed_preview
++ service_type
++ status
+
+service_request_system
++ service_id
++ system_code
+
+
+service_request_log
++ service_id
++ ts
++ description
+
+action
++ action_id
++ title
++ description
++ dt_identified
++ dt_plan
++ dt_executed
++ flag_validated
++ responsible
++ system
+
+action_log
++ action_id
++ ts
++ description
+

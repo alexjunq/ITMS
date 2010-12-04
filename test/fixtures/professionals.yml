@@ -1,0 +1,39 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  matricula: MyString
+  nome_cracha: MyString
+  dt_inicio: 2010-11-26
+  dt_termino: 2010-11-26
+  empresa: MyString
+  nome: MyString
+  rg: MyString
+  cpf: MyString
+  dt_nasc: 2010-11-26
+  endereco: MyString
+  cargo: MyString
+  depto: MyString
+  telefone: MyString
+  celular: MyString
+  email: MyString
+  email_tim: MyString
+  redir_email: false
+
+two:
+  matricula: MyString
+  nome_cracha: MyString
+  dt_inicio: 2010-11-26
+  dt_termino: 2010-11-26
+  empresa: MyString
+  nome: MyString
+  rg: MyString
+  cpf: MyString
+  dt_nasc: 2010-11-26
+  endereco: MyString
+  cargo: MyString
+  depto: MyString
+  telefone: MyString
+  celular: MyString
+  email: MyString
+  email_tim: MyString
+  redir_email: false

@@ -1,0 +1,45 @@
+<h1>Listing professionals</h1>
+
+<table>
+  <tr>
+    <th>Matricula</th>
+    <th>Nome</th>
+    <th>Nome cracha</th>
+    <th>Rg</th>
+    <th>Cpf</th>
+    <th>Dt nasc</th>
+    <th>Endereco</th>
+    <th>Cargo</th>
+    <th>Depto</th>
+    <th>Telefone</th>
+    <th>Celular</th>
+    <th>Email</th>
+    <th>Email tim</th>
+    <th>Redir email</th>
+  </tr>
+
+<% @professionals.each do |professional| %>
+  <tr>
+    <td><%=h professional.matricula %><br><%= link_to 'Show', professional %><br>
+	<%= link_to 'Edit', edit_professional_path(professional) %>	</td>
+    <td><%=h professional.nome %></td>
+    <td><%=h professional.nome_cracha %></td>
+    <td><%=h professional.rg %></td>
+    <td><%=h professional.cpf %></td>
+    <td><%=h professional.dt_nasc %></td>
+    <td><%=h professional.endereco %></td>
+    <td><%=h professional.cargo %></td>
+    <td><%=h professional.depto %></td>
+    <td><%=h professional.telefone %></td>
+    <td><%=h professional.celular %></td>
+    <td><%=h professional.email %></td>
+    <td><%=h professional.email_tim %></td>
+    <td><%=h professional.redir_email %></td>
+    <td><%= link_to 'Destroy', professional, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New professional', new_professional_path %>

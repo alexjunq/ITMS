@@ -1,0 +1,111 @@
+<h1>New professional</h1>
+
+<table border="0">
+<% form_for(@professional) do |f| %>
+  <tr><td><%= f.error_messages %></td></tr>
+  <tr>
+  	<td>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome, :size=>50 %>
+  </td>
+  <td>
+    <%= f.label :dt_nasc %><br />
+    <%= f.date_select :dt_nasc, :start_year=>1950, :default=> { :year => 1970 }, :end_year => Time.now.year %>
+	</td>
+  <td>
+    <%= f.label :matricula %><br />
+    <%= f.text_field :matricula %>
+  </td>
+  </tr>
+  <tr>
+  	<td>
+    <%= f.label :nome_cracha %><br />
+    <%= f.text_field :nome_cracha %>
+  </td><td>
+    <%= f.label :no_cracha %><br />
+    <%= f.text_field :no_cracha %>
+  </td>
+  </tr>
+  <tr>
+  	<td>
+    <%= f.label :dt_inicio %><br />
+    <%= f.date_select :dt_inicio %>
+  </td><td>
+    <%= f.label :dt_termino %><br />
+    <%= f.date_select :dt_termino %>
+  </td><td>
+    <%= f.label :empresa %><br />
+    <%= f.text_field :empresa %>
+  </td>
+  <td>
+    <%= f.label :cargo %><br />
+	<%= f.select :cargo, ['Analista Desempenho', 'Gerente Tecnico', 'Gerente Projetos', 'Diretor', 'Comercial', 'Outros'] %>
+    </td>
+	<td>
+    <%= f.label :depto %><br />
+    <%= f.select :depto, ['TI', 'Outros'] %>
+	</td>
+  </tr>
+  <tr>
+  	<td>
+    <%= f.label :rg %><br />
+    <%= f.text_field :rg %>
+	</td><td>
+    <%= f.label :rg_expedicao %><br />
+    <%= f.date_select :rg_expedicao, :start_year=>1950 %>
+	</td><td>
+    <%= f.label :rg_orgao_expedidor %><br />
+    <%= f.text_field :rg_orgao_expedidor %>
+	</td><td>
+    <%= f.label :naturalidade %><br />
+    <%= f.text_field :naturalidade %>
+	</td><td>
+    <%= f.label :cpf %><br />
+    <%= f.text_field :cpf %>
+	</td>
+  </tr>
+  <tr><td colspan="5">
+    <%= f.label :endereco %><br />
+    <%= f.text_field :endereco, :size=>150 %>
+ </td>
+  </tr>
+  <tr>
+  	<td>
+    <%= f.label :telefone %><br />
+    <%= f.text_field :telefone %>
+  </td>
+  <td>
+    <%= f.label :celular %><br />
+    <%= f.text_field :celular %>
+	</td>
+  </tr>
+  <tr>
+  	<td>
+    <%= f.label :email %><br />
+    <%= f.text_field :email, :size=>50 %>
+  </td>
+  <td>
+    <%= f.label :email_tim %><br />
+    <%= f.text_field :email_tim, :size=>50 %>
+  </td>
+  <td>
+    <%= f.label :redir_email %><br />
+    <%= f.check_box :redir_email %>
+  </td>
+  </tr>
+  <tr>
+  	<td>
+    <%= f.label :nome_pai %><br />
+    <%= f.text_field :nome_pai, :size=>50 %>
+	</td>
+	<td>
+    <%= f.label :nome_mae %><br />
+    <%= f.text_field :nome_mae, :size=>50 %>
+  </td>
+</tr>
+<tr><td>
+    <%= f.submit 'Create' %>
+  </td></tr>
+<% end %>
+</table>
+<%= link_to 'Back', professionals_path %>

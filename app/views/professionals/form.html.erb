@@ -1,0 +1,37 @@
+<h1>Information to COPY AND PASTE on TIM XLS</h1>
+
+<table>
+  <tr>
+    <th>Matricula</th>
+    <th>Nome cracha</th>
+	<th>Data Inicio</th>
+	<th>Data Termino</th>
+	<th>Empresa</th>
+    <th>Nome Completo do Profissional</th>
+    <th>RG/Passaporte</th>
+    <th>CPF</th>
+    <th>Dt Nascimento</th>
+    <th>Endereco Residencial</th>
+    <th>Cargo/Funcao</th>
+    <th>Depto</th>
+  </tr>
+
+<% @professionals.sort{|a,b| a.nome <=> b.nome}.each do |professional| %>
+  <tr>
+    <td><%=h (professional.matricula == '' ? '---': professional.matricula) %></td>
+    <td><%=h (professional.nome_cracha == '' ? (professional.no_cracha == '' ? '---' : '#'+professional.no_cracha) : professional.nome_cracha) %></td>
+	<td>2011/01/01</td>
+	<td>2011/12/31</td>
+    <td><%=h professional.empresa %></td>
+    <td><%=h professional.nome %></td>
+    <td><%=h professional.rg.gsub(/[\.\-\/]/, '') %></td>
+    <td><%=h professional.cpf.gsub(/[\.\-\/]/, '') %></td>
+    <td><%=h professional.dt_nasc %></td>
+    <td><%=h professional.endereco %></td>
+    <td><%=h professional.cargo %></td>
+    <td><%=h professional.depto %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
